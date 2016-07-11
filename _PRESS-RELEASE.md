@@ -18,27 +18,36 @@ Once the project moves into development, the press release can be used as a touc
  
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
+  Arena Clicker
 
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  Click to become the Champion!
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  Choose foes to fight and earn points.  You can then spend those points to purchase upgrades that help you take down even tougher creatures.  Get the highest score to become the champion!
 
 ## Problem ##
   > Describe the problem your product solves.
+  Slay boredom by becoming the greatest Arena Champion!
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
+  Click your way to victory!
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.
+  "I haven't stepped away from my computer in weeks!" - CTO of SilverSporkMedia
 
 ## How to Get Started ##
   > Describe how easy it is to get started.
+  Make an account, choose an enemy, and start clicking your way through the arena matches!
 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  "I tapped my screen a few times and then it said I earned some points.  It was so rewarding!" - Redd Herrington
 
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
+  Keep your mouses at the ready on SilverSporkMedia.com for more information.
