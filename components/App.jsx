@@ -48,6 +48,11 @@ class App extends React.Component {
     }
   }
 
+  increasePoints(points) {
+    this.state.currentScore += points;
+    this.state.totalScore += points;
+  }
+
   render() {
     return (
       // html format here
@@ -61,7 +66,8 @@ class App extends React.Component {
         <Arena state={this.state}
           click={this.clickTarget.bind(this)} />
         <Monsters currMonster={this.state.currentMonster}
-          clkMon={this.clickMonster.bind(this)} />
+          clkMon={this.clickMonster.bind(this)} 
+          totalPoints={this.state.totalPoints}/>
       </div>
     );
   }
