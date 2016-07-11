@@ -1,0 +1,1 @@
+ReactDOM.render(<App clickerArena={clickerArena} />, document.getElementById('app'));
