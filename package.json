@@ -1,0 +1,14 @@
+{
+  "name": "Arena Clicker - MVP",
+  "version": "0.1.0",
+  "description": "Making a MVP in 36 hours",
+  "author": "Hack Reactor <curriculum.team@hackreactor.com>",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
