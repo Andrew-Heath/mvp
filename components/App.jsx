@@ -27,6 +27,14 @@ class App extends React.Component {
     this.increasePoints = this.increasePoints.bind(this);
   }
 
+  clickUpgrade(type) {
+    if (type === 'cpc') {
+      this.state.clickPerClick++;
+    } else if (type === 'cps') {
+      this.state.clickPerSecond++;
+    }
+  }
+
   render() {
     return (
       // html format here
@@ -46,6 +54,9 @@ class App extends React.Component {
           clkMon={this.clickMonster.bind(this)} />
       </div>
     );
+  }
+  componentDidMount() {
+    console.log('ready');
   }
 }
 
