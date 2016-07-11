@@ -27,9 +27,10 @@ class App extends React.Component {
     this.increasePoints = this.increasePoints.bind(this);
   }
 
-  clickUpgrade(type) {
-    if (type === 'cpc') {
-      this.state.clickPower++;
+  clickUpgrade(cost, type) {
+    if (cost <= this.state.currentScore) {
+      this.state.clickPower += type;
+      this.state.currentScore -= cost;
     }
     // } else if (type === 'cps') {
     //   this.state.clickPerSecond++;
@@ -51,6 +52,10 @@ class App extends React.Component {
   increasePoints(points) {
     this.state.currentScore += points;
     this.state.totalScore += points;
+  }
+
+  clickMonster(monster) {
+    this.state.currentMonster = monster;
   }
 
   render() {
