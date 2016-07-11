@@ -42,6 +42,8 @@ class App extends React.Component {
         <Monsters clkPerSec={this.state.clickPerSecond}
           clkPerClk={this.state.clickPerSecond}
           currMonster={this.state.currentMonster}
+          incPoints={this.increasePoints.bind(this)} 
+          clkMon={this.clickMonster.bind(this)} />
       </div>
     );
   }
