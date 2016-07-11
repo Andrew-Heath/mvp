@@ -6,8 +6,8 @@ class App extends React.Component {
     this.state = {
       currentScore: 0,
       totalScore: 0,
-      clickPerSecond: 0,
-      clickPerClick: 1,
+      // clickPerSecond: 0,
+      clickPower: 1,
       currentMonster: {},
       monsterList: {
         // Move monster list to a database?
@@ -16,7 +16,7 @@ class App extends React.Component {
         //   img: filepath,
         //   clicks: {
         //     curr: 0,
-        //     need: null
+        //     max: null
         //   },
         //   points: null}
       }
@@ -29,9 +29,22 @@ class App extends React.Component {
 
   clickUpgrade(type) {
     if (type === 'cpc') {
-      this.state.clickPerClick++;
-    } else if (type === 'cps') {
-      this.state.clickPerSecond++;
+      this.state.clickPower++;
+    }
+    // } else if (type === 'cps') {
+    //   this.state.clickPerSecond++;
+    // }
+  }
+
+  clickTarget() {
+    // increase currMonster's clicks by clicksPerClick
+    this.state.currentMonster.clicks.curr -= this.state.clickPower
+    // if clicks > need
+    if (this.state.currentMonster.clicks.curr <= 0) {
+      // monster is finished, reward points
+      this.increasePoints(this.state.currentMonster.points);
+      // reset monster to 0 clicks
+      this.state.currentMonster.clicks.curr = this.state.currentMonster.clicks.max;
     }
   }
 
@@ -42,15 +55,12 @@ class App extends React.Component {
         <Score currScore={this.state.currentScore}
           totalScore={this.state.totalScore} />
         <Upgrades currScore={this.state.currentScore}
-          clkPerSec={this.state.clickPerSecond}
-          clkPerClk={this.state.clickPerClick}
+          // clkPerSec={this.state.clickPerSecond}
+          clkPerClk={this.state.clickPower}
           click={this.clickUpgrade.bind(this)} />
         <Arena state={this.state}
           click={this.clickTarget.bind(this)} />
-        <Monsters clkPerSec={this.state.clickPerSecond}
-          clkPerClk={this.state.clickPerSecond}
-          currMonster={this.state.currentMonster}
-          incPoints={this.increasePoints.bind(this)} 
+        <Monsters currMonster={this.state.currentMonster}
           clkMon={this.clickMonster.bind(this)} />
       </div>
     );
