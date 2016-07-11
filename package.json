@@ -6,7 +6,8 @@
   "license": "UNLICENSED",
   "private": true,
   "scripts": {
-    "start": "babel . --out-dir compiled --presets=es2015,react --ignore=node_modules,compiled --source-maps inline -w"
+    "start": "babel . --out-dir compiled --presets=es2015,react --ignore=node_modules,compiled --source-maps inline -w",
+    "comp": "babel . --out-dir compliled --babel-preset-es2015,react --ignore=node_modules,compiled --source-maps inline"
   },
   "dependencies": {
     "jquery": "^3.1.0",
