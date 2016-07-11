@@ -5,7 +5,9 @@
   "author": "Hack Reactor <curriculum.team@hackreactor.com>",
   "license": "UNLICENSED",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "start": "babel . --out-dir compiled --presets=es2015,react --ignore=node_modules,compiled --source-maps inline -w"
+  },
   "dependencies": {
     "jquery": "^3.1.0",
     "react": "^15.2.1",
