@@ -6,7 +6,15 @@ class App extends React.Component {
       totalScore: 0,
       // clickPerSecond: 0,
       clickPower: 1,
-      currentMonster: {},
+      currentMonster: {
+        name: 'Target Practice',
+        img: 'filepath placeholder',
+        clicks: {
+          crr: 99999,
+          max:99999
+        },
+        points: 1000000
+      },
       monsterList: {
         // Move monster list to a database?
         leperchaun: {
@@ -67,20 +75,21 @@ class App extends React.Component {
 
   render() {
     return (
-      // html format here
-      <h1>Arena Clicker</h1>
       <div>
-        <Score currScore={this.state.currentScore}
-          totalScore={this.state.totalScore} />
-        <Upgrades clickPower={this.state.clickPower}
-          upgradeList={this.state.upgradeList}
-          click={this.clickUpgrade.bind(this)} />
-        <Arena monster={this.state.currentMonster}
-          click={this.clickTarget.bind(this)} />
-        }
-        <Monsters monsterList={this.state.monsterList}
-          totalPoints={this.state.totalPoints}
-          click={this.clickMonster.bind(this)} /> 
+        <h1>Arena Clicker</h1>
+        <div>
+          <Score currScore={this.state.currentScore}
+            totalScore={this.state.totalScore} />
+          <Upgrades clickPower={this.state.clickPower}
+            upgradeList={this.state.upgradeList}
+            click={this.clickUpgrade.bind(this)} />
+          <Arena monster={this.state.currentMonster}
+            click={this.clickTarget.bind(this)} />
+          }
+          <Monsters monsterList={this.state.monsterList}
+            totalPoints={this.state.totalPoints}
+            click={this.clickMonster.bind(this)} /> 
+        </div>
       </div>
     );
   }

@@ -1,7 +1,9 @@
 var MonsterLVE = ({monster, click}) => (
-  <div>{monster.name}</div>
-  <div>Clicks: {monster.clicks.max}</div>
-  <div>Points: {monster.points}</div>
+  <div>
+    <div>{monster.name}</div>
+    <div>Clicks: {monster.clicks.max}</div>
+    <div>Points: {monster.points}</div>
+  </div>
 );
 
 Window.MonsterLVE = MonsterLVE;
