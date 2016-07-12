@@ -1,8 +1,8 @@
 var Upgrades = ({clickPower, upgradeList, click}) => (
-  <div>
+  <div id="upgrade-pane">
     <h3>Click Power:</h3> {clickPower}<br />
     <h2>Upgrades</h2>
-    <div class="upgradeList">
+    <div className="upgrade-list">
       {_.map(upgradeList, upgrade => 
         <UpgradeLVE upgrade={upgrade} click={click} />
       )}
