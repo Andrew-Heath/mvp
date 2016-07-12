@@ -10,7 +10,7 @@ class App extends React.Component {
         name: 'Target Practice',
         img: 'filepath placeholder',
         clicks: {
-          crr: 99999,
+          curr: 99999,
           max:99999
         },
         points: 1000000
@@ -54,7 +54,7 @@ class App extends React.Component {
 
   clickTarget() {
     // increase currMonster's clicks by clicksPerClick
-    this.state.currentMonster.clicks.curr -= this.state.clickPower
+    this.state.currentMonster.clicks.curr -= this.state.clickPower;
     // if clicks > need
     if (this.state.currentMonster.clicks.curr <= 0) {
       // monster is finished, reward points
@@ -70,6 +70,7 @@ class App extends React.Component {
   }
 
   clickMonster(monster) {
+    this.state.currentMonster.clicks.curr = this.state.currentMonster.clicks.max;
     this.state.currentMonster = monster;
   }
 
@@ -85,7 +86,6 @@ class App extends React.Component {
             click={this.clickUpgrade.bind(this)} />
           <Arena monster={this.state.currentMonster}
             click={this.clickTarget.bind(this)} />
-          }
           <Monsters monsterList={this.state.monsterList}
             totalPoints={this.state.totalPoints}
             click={this.clickMonster.bind(this)} /> 
