@@ -46,8 +46,7 @@ class App extends React.Component {
     if (cost <= this.state.currentScore) {
       var newPow = this.state.clickPower + power;
       var newScore = this.state.currentScore - cost;
-      this.setState({clickPower: newPow});
-      this.setState({currentScore: newScore});
+      this.setState({clickPower: newPow, currentScore: newScore});
     }
     // } else if (type === 'cps') {
     //   this.state.clickPerSecond++;
@@ -56,23 +55,23 @@ class App extends React.Component {
 
   clickTarget() {
     // increase currMonster's clicks by clicksPerClick
-    var currHealth = this.state.currentMonster.clicks.curr - this.state.clickPower;
+    var monster = this.state.currentMonster
+    var currHealth = monster.clicks.curr - this.state.clickPower;
     // if clicks > need
     if (currHealth <= 0) {
       // monster is finished, reward points
-      this.increasePoints(this.state.currentMonster.points);
+      this.increasePoints(monster.points);
       // reset monster to 0 clicks
-      currHealth = this.state.currentMonster.clicks.max;
+      currHealth = monster.clicks.max;
     }
-    this.state.currentMonster.clicks.curr = currHealth;
-    this.setState({currentMonster: this.state.currentMonster});
+    monster.clicks.curr = currHealth;
+    this.setState({currentMonster: monster});
   }
 
   increasePoints(points) {
     var newCurr = this.state.currentScore + points;
     var newTotal = this.state.totalScore + points;
-    this.setState({currentScore: newCurr});
-    this.setStat({totalScore: newTotal});
+    this.setState({currentScore: newCurr, totalScore: newTotal});
   }
 
   clickMonster(monster) {
