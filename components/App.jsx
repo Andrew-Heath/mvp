@@ -71,7 +71,8 @@ class App extends React.Component {
       <div>
         <Score currScore={this.state.currentScore}
           totalScore={this.state.totalScore} />
-        <Upgrades currScore={this.state.currentScore}
+        <Upgrades upgradeList={this.state.upgradeList}
+          currScore={this.state.currentScore}
           click={this.clickUpgrade.bind(this)} />
         <Arena state={this.state}
           click={this.clickTarget.bind(this)} />
