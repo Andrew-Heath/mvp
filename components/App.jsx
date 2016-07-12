@@ -25,61 +25,131 @@ class App extends React.Component {
             curr: 5,
             max: 5
           },
-          points: 3}
+          points: 3
+        },
+        mallRat: {
+          name: 'Mall Rat',
+          img: 'filepath placeholder',
+          unlock: 50,
+          clicks: {
+            curr: 10,
+            max: 10
+          },
+          points: 7
+        },
+        goblin: {
+          name: 'Goblin',
+          img: 'filepath placeholder',
+          unlock: 125,
+          clicks: {
+            curr: 15,
+            max: 15
+          },
+          points: 12
+        },
+        shavedBear: {
+          name: 'Shaved Bear',
+          img: 'filepath placeholder',
+          unlock: 250,
+          clicks: {
+            curr: 25,
+            max: 25
+          },
+          points: 20
+        },
+        clowns: {
+          name: 'Gang of Clowns',
+          img: 'filepath placeholder',
+          unlock: 500,
+          clicks: {
+            curr: 50,
+            max: 50
+          },
+          points: 50
+        },
+        goblin2: {
+          name: 'Goblins with Molotovs',
+          img: 'filepath placeholder',
+          unlock: 800,
+          clicks: {
+            curr: 100,
+            max: 100
+          },
+          points: 125
+        },
+        bear: {
+          name: 'Bear',
+          img: 'filepath placeholder',
+          unlock: 1500,
+          clicks: {
+            curr: 250,
+            max: 250
+          },
+          points: 350
+        },
+        mechaHitler: {
+          name: 'Mecha-Hitler',
+          img: 'filepath placeholder',
+          unlock: 3000,
+          clicks: {
+            curr: 500,
+            max: 500
+          },
+          points: 750
+        } 
       },
       upgradeList: {
         // Move upgrade list to database?
         rustySpoon: {
           name: 'Rusty Spoon',
-          cost: 15,
+          cost: 20,
           power: 1 
         },
         platicKnife: {
           name: 'Plastic Knife',
-          cost: 28,
+          cost: 38,
           power: 2 
         },
         nerfBat: {
           name: 'Nerf Bat',
-          cost: 41,
+          cost: 56,
           power: 3 
         },
         sharpStick: {
           name: 'Sharpened Stick',
-          cost: 54,
+          cost: 74,
           power: 4 
         },
         heavyRock: {
           name: 'Heavy Rock',
-          cost: 67,
+          cost: 92,
           power: 5 
         },
         knife: {
           name: 'A Real Knife',
-          cost: 80,
+          cost: 110,
           power: 6 
         },
         roadFlare: {
           name: 'Road Flares',
-          cost: 93,
+          cost: 128,
           power: 7
         },
         bigAxe: {
           name: 'A Big Axe',
-          cost: 106,
+          cost: 146,
           power: 8
         },
         peaShooter: {
           name: 'A Pea Shooter',
-          cost: 119,
+          cost: 164,
           power: 9
         },
         glock: {
           name: '9mm Glock',
-          cost: 132,
+          cost: 182,
           power: 10 
-        },
-
+        }
       }
     }
     this.clickUpgrade = this.clickUpgrade.bind(this);
@@ -139,7 +209,7 @@ class App extends React.Component {
           <Arena monster={this.state.currentMonster}
             click={this.clickTarget.bind(this)} />
           <Monsters monsterList={this.state.monsterList}
-            totalPoints={this.state.totalPoints}
+            totalPoints={this.state.totalScore}
             click={this.clickMonster.bind(this)} /> 
         </div>
       </div>
