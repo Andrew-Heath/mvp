@@ -1,7 +1,7 @@
 var UpgradeLVE = ({upgrade, click}) => (
-  <div onClick={() => { click(upgrade.cost, upgrade.power); }}>
-    <div>Name: {upgrade.name}<span>Cost: {upgrade.cost}</span></div>
-    <div>Increases click power by {upgrade.power}.</div>
+  <div class="upgrade" onClick={() => { click(upgrade.cost, upgrade.power); }}>
+    <div class="name">Name: {upgrade.name}<span class="cost"> - Cost: {upgrade.cost}</span></div>
+    <div class="power">Increases click power by {upgrade.power}.</div>
   </div>
 );
 

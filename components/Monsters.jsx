@@ -1,9 +1,11 @@
 var Monsters = ({monsterList, totalPoints, click}) => (
   <div>
     <h3>Monsters</h3>
-    {_.map(monsterList, monster => 
-      <MonsterLVE monster={monster} click={click} />
-    )}
+    <div class="monsterList">
+      {_.map(monsterList, monster => 
+        <MonsterLVE monster={monster} click={click} />
+      )}
+    </div>
   </div>
 );
 

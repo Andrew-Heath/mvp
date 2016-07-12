@@ -83,7 +83,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Arena Clicker</h1>
+        <h1 id="main-title">Arena Clicker</h1>
         <div>
           <Score currScore={this.state.currentScore}
             totalScore={this.state.totalScore} />

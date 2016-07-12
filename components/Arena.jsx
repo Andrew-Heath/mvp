@@ -1,7 +1,7 @@
 var Arena = ({monster, click}) => (
-  <div>
-    <div>Health: {monster.clicks.curr}</div>
-    <div onClick={() => {click()}}> {monster.img}</div>
+  <div id="arena">
+    <div class="health">Health: {monster.clicks.curr}</div>
+    <div class="target" onClick={() => {click()}}> {monster.img}</div>
   </div>
 );
 
