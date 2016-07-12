@@ -7,7 +7,7 @@ class App extends React.Component {
       // clickPerSecond: 0,
       clickPower: 1,
       currentMonster: {
-        name: 'Target Practice',
+        name: 'Practice Dummy',
         img: 'filepath placeholder',
         clicks: {
           curr: 99999,
@@ -29,11 +29,57 @@ class App extends React.Component {
       },
       upgradeList: {
         // Move upgrade list to database?
-        knife: {
-          name: 'Knife',
+        rustySpoon: {
+          name: 'Rusty Spoon',
           cost: 15,
           power: 1 
-        }
+        },
+        platicKnife: {
+          name: 'Plastic Knife',
+          cost: 28,
+          power: 2 
+        },
+        nerfBat: {
+          name: 'Nerf Bat',
+          cost: 41,
+          power: 3 
+        },
+        sharpStick: {
+          name: 'Sharpened Stick',
+          cost: 54,
+          power: 4 
+        },
+        heavyRock: {
+          name: 'Heavy Rock',
+          cost: 67,
+          power: 5 
+        },
+        knife: {
+          name: 'A Real Knife',
+          cost: 80,
+          power: 6 
+        },
+        roadFlare: {
+          name: 'Road Flares',
+          cost: 93,
+          power: 7
+        },
+        bigAxe: {
+          name: 'A Big Axe',
+          cost: 106,
+          power: 8
+        },
+        peaShooter: {
+          name: 'A Pea Shooter',
+          cost: 119,
+          power: 9
+        },
+        glock: {
+          name: '9mm Glock',
+          cost: 132,
+          power: 10 
+        },
+
       }
     }
     this.clickUpgrade = this.clickUpgrade.bind(this);
