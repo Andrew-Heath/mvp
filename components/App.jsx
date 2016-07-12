@@ -68,10 +68,12 @@ class App extends React.Component {
   render() {
     return (
       // html format here
+      <h1>Arena Clicker</h1>
       <div>
         <Score currScore={this.state.currentScore}
           totalScore={this.state.totalScore} />
-        <Upgrades upgradeList={this.state.upgradeList}
+        <Upgrades clickPower={this.state.clickPower}
+          upgradeList={this.state.upgradeList}
           currScore={this.state.currentScore}
           click={this.clickUpgrade.bind(this)} />
         <Arena state={this.state}
