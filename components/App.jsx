@@ -9,14 +9,23 @@ class App extends React.Component {
       currentMonster: {},
       monsterList: {
         // Move monster list to a database?
-        // monName: {
-        //   name: '',
-        //   img: filepath,
-        //   clicks: {
-        //     curr: 0,
-        //     max: null
-        //   },
-        //   points: null}
+        leperchaun: {
+          name: 'Leper-chaun',
+          img: filepath,
+          unlock: 0,
+          clicks: {
+            curr: 5,
+            max: 5
+          },
+          points: 3}
+      },
+      upgradeList: {
+        // Move upgrade list to database?
+        knife: {
+          name: 'Knife',
+          cost: 15,
+          power: 1 
+        }
       }
     }
     this.clickUpgrade = this.clickUpgrade.bind(this);
@@ -63,8 +72,6 @@ class App extends React.Component {
         <Score currScore={this.state.currentScore}
           totalScore={this.state.totalScore} />
         <Upgrades currScore={this.state.currentScore}
-          // clkPerSec={this.state.clickPerSecond}
-          clkPerClk={this.state.clickPower}
           click={this.clickUpgrade.bind(this)} />
         <Arena state={this.state}
           click={this.clickTarget.bind(this)} />
