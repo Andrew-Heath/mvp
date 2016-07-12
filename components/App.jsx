@@ -78,7 +78,7 @@ class App extends React.Component {
         <Arena monster={this.state.currentMonster}
           click={this.clickTarget.bind(this)} />
         }
-        <Monsters monsters={this.state.monsterList}
+        <Monsters monsterList={this.state.monsterList}
           totalPoints={this.state.totalPoints}
           click={this.clickMonster.bind(this)} /> 
       </div>
