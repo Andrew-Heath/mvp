@@ -44,8 +44,10 @@ class App extends React.Component {
 
   clickUpgrade(cost, power) {
     if (cost <= this.state.currentScore) {
-      this.state.clickPower += power;
-      this.state.currentScore -= cost;
+      var newPow = this.state.clickPower + power;
+      var newScore = this.state.currentScore - cost;
+      this.setState({clickPower: newPow;});
+      this.setState({currentScore: newScore});
     }
     // } else if (type === 'cps') {
     //   this.state.clickPerSecond++;
