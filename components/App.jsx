@@ -11,7 +11,7 @@ class App extends React.Component {
         // Move monster list to a database?
         leperchaun: {
           name: 'Leper-chaun',
-          img: filepath,
+          img: 'filepath placeholder',
           unlock: 0,
           clicks: {
             curr: 5,
@@ -75,8 +75,9 @@ class App extends React.Component {
         <Upgrades clickPower={this.state.clickPower}
           upgradeList={this.state.upgradeList}
           click={this.clickUpgrade.bind(this)} />
-        <Arena state={this.state}
+        <Arena monster={this.state.currentMonster}
           click={this.clickTarget.bind(this)} />
+        }
         <Monsters currMonster={this.state.currentMonster}
           clkMon={this.clickMonster.bind(this)} 
           totalPoints={this.state.totalPoints}/>
