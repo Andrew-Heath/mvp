@@ -34,9 +34,9 @@ class App extends React.Component {
     this.increasePoints = this.increasePoints.bind(this);
   }
 
-  clickUpgrade(cost, type) {
+  clickUpgrade(cost, power) {
     if (cost <= this.state.currentScore) {
-      this.state.clickPower += type;
+      this.state.clickPower += power;
       this.state.currentScore -= cost;
     }
     // } else if (type === 'cps') {
