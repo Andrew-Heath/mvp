@@ -44,6 +44,7 @@
 
 .monster {
   text-align: right;
+  padding-bottom: 5px;
 }
 
 /*- Arena -*/
@@ -57,6 +58,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-image: url("../images/arena.png");
 }
 .target-name {
   font-size: 25px;
@@ -64,10 +66,10 @@
   padding-top: 15px;
 }
 .health {
-  padding: 5px;
+  padding-top: 30px;
 }
 .target {
-  padding-top: 75px;
+  padding-top: 160px;
 }
 
 

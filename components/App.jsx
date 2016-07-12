@@ -8,7 +8,7 @@ class App extends React.Component {
       clickPower: 1,
       currentMonster: {
         name: 'Practice Dummy',
-        img: 'filepath placeholder',
+        img: '../images/leperchaun.png',
         clicks: {
           curr: 99999,
           max:99999
@@ -19,7 +19,7 @@ class App extends React.Component {
         // Move monster list to a database?
         leperchaun: {
           name: 'Leper-chaun',
-          img: 'filepath placeholder',
+          img: '../images/leperchaun.png',
           unlock: 0,
           clicks: {
             curr: 5,
@@ -29,7 +29,7 @@ class App extends React.Component {
         },
         mallRat: {
           name: 'Mall Rat',
-          img: 'filepath placeholder',
+          img: '../images/leperchaun.png',
           unlock: 50,
           clicks: {
             curr: 10,
@@ -39,7 +39,7 @@ class App extends React.Component {
         },
         goblin: {
           name: 'Goblin',
-          img: 'filepath placeholder',
+          img: '../images/leperchaun.png',
           unlock: 125,
           clicks: {
             curr: 15,
@@ -49,7 +49,7 @@ class App extends React.Component {
         },
         shavedBear: {
           name: 'Shaved Bear',
-          img: 'filepath placeholder',
+          img: '../images/leperchaun.png',
           unlock: 250,
           clicks: {
             curr: 25,
@@ -59,7 +59,7 @@ class App extends React.Component {
         },
         clowns: {
           name: 'Gang of Clowns',
-          img: 'filepath placeholder',
+          img: '../images/leperchaun.png',
           unlock: 500,
           clicks: {
             curr: 50,
@@ -69,7 +69,7 @@ class App extends React.Component {
         },
         goblin2: {
           name: 'Goblins with Molotovs',
-          img: 'filepath placeholder',
+          img: '../images/leperchaun.png',
           unlock: 800,
           clicks: {
             curr: 100,
@@ -79,7 +79,7 @@ class App extends React.Component {
         },
         bear: {
           name: 'Bear',
-          img: 'filepath placeholder',
+          img: '../images/leperchaun.png',
           unlock: 1500,
           clicks: {
             curr: 250,
@@ -89,7 +89,7 @@ class App extends React.Component {
         },
         mechaHitler: {
           name: 'Mecha-Hitler',
-          img: 'filepath placeholder',
+          img: '../images/leperchaun.png',
           unlock: 3000,
           clicks: {
             curr: 500,
