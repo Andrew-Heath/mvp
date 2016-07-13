@@ -156,6 +156,8 @@ class App extends React.Component {
     this.clickTarget = this.clickTarget.bind(this);
     this.clickMonster = this.clickMonster.bind(this);
     this.increasePoints = this.increasePoints.bind(this);
+    this.recordScore = this.recordScore.bind(this);
+    this.renderHighScore = this.renderHighScore.bind(this);
   }
 
   clickUpgrade(cost, power) {
@@ -196,12 +198,24 @@ class App extends React.Component {
     this.setState({currentMonster: monster});
   }
 
+  recordScore(name, score) {
+    // makes post request
+    // sends name and score off to be stored
+  }
+
+  renderHighScore() {
+    // makes get request
+    // grabs all scores and makes the top 5 appear on screen
+  }
+
   render() {
     return (
       <div>
         <h1 id="main-title">Arena Clicker</h1>
         <div>
-          <Score currScore={this.state.currentScore} />
+          <Score currScore={this.state.currentScore}
+            renderHighScore={this.renderHighScore.bind(this)}
+            recordScore={this.recordScore.bind(this)} />
           <Upgrades clickPower={this.state.clickPower}
             upgradeList={this.state.upgradeList}
             click={this.clickUpgrade.bind(this)} />
