@@ -8,17 +8,10 @@ module.exports = {
       queryHelper(queryString, res);
     },
     post: function (data, res) {
-      var queryString = 'SELECT * FROM users WHERE username="' + 
-        data.username + '"';
-      queryHelper(queryString, res, function(err, results) {
-        if (results.length === 0) {
-          queryString = 'INSERT users VALUE(0, "' + 
-          data.username + '")';
-          queryHelper(queryString, res);
-        } else {
-          res.send(results);
-        }
-      });
+        queryString = 'INSERT users VALUE(0, "' + 
+        data.username + '", "' + data.score + '")';
+        queryHelper(queryString, res);
+      };
     }
   }
 };

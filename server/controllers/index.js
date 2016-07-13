@@ -14,7 +14,7 @@ module.exports = {
       res.header(defaultCorsHeaders);
       Users.findOrCreate({where: {username: req.body.username}})
       .spread(function(user, created) {
-        res.sendStatus(created ? 201 : 200);
+        res.sendStatus(200);
       });
     },
 

@@ -201,8 +201,7 @@ class App extends React.Component {
       <div>
         <h1 id="main-title">Arena Clicker</h1>
         <div>
-          <Score currScore={this.state.currentScore}
-            totalScore={this.state.totalScore} />
+          <Score currScore={this.state.currentScore} />
           <Upgrades clickPower={this.state.clickPower}
             upgradeList={this.state.upgradeList}
             click={this.clickUpgrade.bind(this)} />
